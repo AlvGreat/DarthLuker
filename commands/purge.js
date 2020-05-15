@@ -5,7 +5,7 @@ module.exports = {
     guildOnly: true,
     cooldown: 1,
 	execute(message, args) {
-		if (member.roles.cache.some(role => role.name === 'Mod')) {
+		if (member.roles.cache.some(role => role.name === '-m')) {
 			const amount = parseInt(args[0]);
 
 			if (isNaN(amount)) {
