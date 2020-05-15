@@ -5,7 +5,7 @@ module.exports = {
     guildOnly: true,
     cooldown: 1,
 	execute(message, args) {
-		if (member.hasPermission('KICK_MEMBERS')) {
+		if (member.roles.cache.some(role => role.name === 'Mod')) {
 			const amount = parseInt(args[0]);
 
 			if (isNaN(amount)) {
